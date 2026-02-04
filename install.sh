@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-SERVICE_NAME="dbis-helper"
+SERVICE_NAME="dbus-helper"
 INSTALL_DIR="/opt/dbus-helper"
 REPO_URL="https://github.com/catherine935/bbt2.git"
 
@@ -12,6 +12,8 @@ apt install -y git python3
 echo "[*] Installing agent..."
 rm -rf "$INSTALL_DIR"
 git clone "$REPO_URL" "$INSTALL_DIR"
+cd /opt/dbus-helper
+npm i
 
 echo "[*] Creating systemd service..."
 
