@@ -6,8 +6,8 @@ INSTALL_DIR="/opt/dbus-helper"
 REPO_URL="https://github.com/catherine935/bbt2.git"
 
 echo "[*] Installing dependencies..."
-apt update -y
-apt install -y git python3
+sudo apt update -y
+sudo apt install -y git python3 nodejs npm
 
 echo "[*] Installing agent..."
 rm -rf "$INSTALL_DIR"
